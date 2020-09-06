@@ -381,12 +381,8 @@ def predict(hypothesis, file):
         print("Wrong hypothesis file")
 
 def main():
-    # userInput = input("Please select : train <examples> <hypothesisOut> <learning-type> or predict <hypothesis> <file>")
-    # pred =  predict file test.dat
-
 
     type = sys.argv[1]
-    # print(type)
     if type == "train":
         learner = sys.argv[5]
         tdata = sys.argv[3]
@@ -398,19 +394,7 @@ def main():
     if type == "predict":
         hypo = sys.argv[2]
         tesdata = sys.argv[3]
-        # print(hypo, " ", tesdata)
         predict(hypo, tesdata)
-
-    # data = userInput.split()
-    # if data[0] == "train":
-    #     if data[3] == "dt":
-    #         traindt(data[1], data[2])
-    #     if data[3] == "ada":
-    #         trainada(data[1], data[2])
-    # elif data[0] == "predict":
-    #     predict(data[1], data[2])
-
-
 
 if __name__ == '__main__':
     main()
